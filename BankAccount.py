@@ -39,12 +39,15 @@ class BankAccount:
             return False
         else:
             return True
-            
-todd = User("Todd", "toddaulwurm@yahoo.com")
-nich = User("Nich", "nichaulwurm@yahoo.com")
+    # @classmethod
+    # def account_record(balance):
+    #     print(balance)
 
-todd.identity().deposit(100).deposit(200).deposit(300).withdraw(50).yield_interest().display_balance()
+todd = BankAccount("Todd", "toddaulwurm@yahoo.com", 500, 0.01)
+nich = BankAccount("Nich", "nichaulwurm@yahoo.com", 500, 0.01)
 
-nich.identity().deposit(20).deposit(200).withdraw(3).withdraw(100).withdraw(20).display_balance()
+todd.identity().deposit(100).deposit(200).deposit(300).withdraw(50).yield_interest().display_account_info()
+
+nich.identity().deposit(20).deposit(200).withdraw(3).withdraw(100).withdraw(20).withdraw(5).yield_interest().display_account_info()
 
 
